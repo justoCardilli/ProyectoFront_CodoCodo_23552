@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Exo+2:wght@100;200;300;400;600&family=Rajdhani:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+header {
+    width: 100%;
+}
+
+.colorWhite{
+    color: white
+}
+.colorVerde{
+    color: green;
+}
+.colorGris {
+    color: rgb(154, 154, 154);
+}
+.encabezado   {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgb(53,58,64);
+    color: beige;
+    align-items: center;
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+}
+li a{
+    text-decoration: none;
+    font-family: 'noto Sans Shavian', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+}
+
+.logo{
+    width: 230px;
+    padding: 20px 20px 20px 80px;
+}
+
+.encabezado h2{
+    font-family: 'noto Sans Shavian', sans-serif;
+    padding-left: 5px;
+    padding-right: 200px;
+    font-weight: 500px;
+}
+/* Aqui se diseña la parte de conferencia*/
+.conferencia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(../assets/img/ba1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    margin-top: 0;
+    padding-right: 40px;
+}
+.textoConfe{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    text-align: right;
+    width: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+.conferencia a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+}
+.conferencia a:hover{
+   background: grey;
+   transition: 1s;
+}
+.botonOrador{
+    font-family: 'noto Sans Shavian', sans-serif;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.botonComprar {
+    font-family: 'Noto Sans Shavian', sans-serif;
+    border-radius: 10px;
+    background-color: rgb(41, 167, 68);
+}
+/* aqui se diseña la parte  de la seccion oradores*/
+main h2 {
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    background: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size: medium;
+}
+.tituloOradores{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+}
+.oradores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+}
+.imagenOradores {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px 5px 0 0;
+    margin-left: 40px;
+}
+.contenido{
+    width: 300px;
+    border-left: 0.5px solid rgb(222, 217, 217);
+    border-bottom: 0.5px solid rgb(222, 217, 217);
+    border-right: 0.5px solid rgb(222, 217, 217);
+    margin-left: 40px;
+    height: 220px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.contenido p{
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-size: small;
+    font-weight: 300;
+    line-height: 20px;
+}
+.tituloAmarillo {
+    display: inline-block;
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: rgb(248, 196, 14);
+    border-radius: 5px;
+    padding: 3px;
+}
+.tituloCeleste {
+    display: inline-block;
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: rgb(29, 159, 183);
+    border-radius: 5px;
+    padding: 3px;
+    color: white;
+}
+.tituloGris {
+    display: inline-block;
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: rgb(106, 116, 126);
+    border-radius: 5px;
+    padding: 3px;
+    color: white;
+}
+.tituloRojo{
+    display: inline-block;
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    background-color:red;
+    border-radius: 5px;
+    padding: 3px;
+    color: white;
+}
+.orador {
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+/* aqui se diseña la parte de  lugar y fecha*/
+.lugarFecha{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid white;
+    width: 100%;
+}
+.lugar {
+    background: rgb(53, 58, 64);
+    border-left:white 1px solid;
+    padding-left: 10px;
+    width: 50%;
+    color: white;
+}
+.lugar h2 {
+    display: inline-block;
+    background: rgb(53,58,64);
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-size: large;
+    font-weight: 700;
+    padding-left: 10px;
+    height: 80px;
+}
+.conoceMas a {
+    text-decoration: none;
+    color: white;
+}
+.conoceMas{
+    display: inline-block;
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+}
+.lugarFecha img{
+    width: 50%;
+}
+.contenidoFormulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+.formulario h2{
+    font-family: 'Noto Sans Shavian', sans-serif;
+    text-align: center;
+    font-size: medium;
+    font-weight: 300;
+    color: rgb(48, 47, 47);
+}
+.tituloOrador{
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-size: xx-large;
+    font-weight: 700;
+    color: rgb(48, 47, 47);
+}
+.datos{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-top: 15px;
+    padding-bottom: 3px;
+}
+.formulario p{
+    text-align: center;
+    font-family: 'Noto Sans Shavian', sans-serif;
+    color: black ;
+}
+.contenidoFormulario p{
+    font-family: 'noto Sans Shavian',sans-serif;
+    font-size: small;
+    color: rgb(110, 109, 109);
+}
+input:hover{
+    background: rgb(223, 218, 218) ;
+}
+input:focus{
+    background: rgb(203, 193, 193);
+}
+.input{
+    width: 210px;
+}
+textarea:hover{
+    background:rgb(224, 219, 218) ;
+}
+textarea{
+    width: 460px;
+    font-family: 'noto Sans Shavian',sans-serif;
+}
+input{
+    padding: 5px;
+    font-family: 'noto Sans Shavian',sans-serif;
+}
+.name{
+    margin-right: 40px;
+}
+.botonEnviar input{
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    background-color: rgb(150,201,62);
+    border-radius: 5px;
+    width: 460px;
+    color: white;
+    margin-bottom: 10px;
+}
+/* aqui se diseña la parte de las publicidad */
+.publicidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+}
+
+/* aqui se diseña la parte del footer */
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 20px 70px 20px 70px;
+    background: linear-gradient(to right, rgb(28, 54, 67), rgb(29, 82, 113));   
+}
+.footer a{
+    width: 80px;
+    text-decoration: none;
+    color:white;
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-size: 15px;
+}
+/* aqui se diseña para la compra de tickets */
+
+.titulo{
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-weight: 700;
+    font-size: xx-large;
+    text-align: center;
+    background-color:  rgb(99, 145, 218);
+    height: 50px;
+    color: white;
+}
+.compraTickets{
+    height: 480px;
+    background-color: rgb(238, 235, 234);
+}
+.ventas{
+    background-color: rgb(208, 205, 205);
+    border: 3px solid rgb(150, 148, 148);
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.comprar{
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(14, 59, 243);
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    color: white;
+}
+.tickets{
+    display: inline-block;
+    width: 250px;
+    padding: 20px;
+}
+
+.main404{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    border: 2px solid grey;
+    width: 300px;
+}
+.imagen404{
+    display: inline-block;
+    margin: 0 auto;
+    width: 270px;
+}
+.main404 img{
+    margin-top: 30px;
+}
+.titulo404{
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+.error{
+    font-family: 'Noto Sans Shavian', sans-serif;
+    font-size: 45;
+    text-align: center;
+    color: red;
+}
+@media screen and (max-width: 768px ){
+    .conferencia{
+        flex-direction: column;
+        justify-content:space-around;
+        align-items:center;
+        text-align: center;
+    }
+    .lugarFecha{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer{
+        justify-content: space-around;
+        align-items: center;
+    }
+}
