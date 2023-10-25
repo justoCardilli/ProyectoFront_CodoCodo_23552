@@ -24,7 +24,7 @@ header {
 }
 .encabezado   {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     background: rgb(53,58,64);
     color: beige;
@@ -32,11 +32,14 @@ header {
 }
 ul{
     display: flex;
+    flex-direction: row;
+    justify-content: right;
     list-style: none;
     margin: 0;
     padding: 0px;
 }
 li a{
+    display: flex;
     text-decoration: none;
     font-family: 'noto Sans Shavian', sans-serif;
     color: white;
@@ -45,14 +48,19 @@ li a{
 }
 
 .logo{
-    width: 230px;
-    padding: 20px 20px 20px 80px;
+    display: flex;
+    width: 240px;
+    padding: 20px 20px 20px 60px;
 }
-
+.tituloLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
 .encabezado h2{
     font-family: 'noto Sans Shavian', sans-serif;
-    padding-left: 5px;
-    padding-right: 200px;
     font-weight: 500px;
 }
 /* Aqui se diseña la parte de conferencia*/
@@ -125,6 +133,7 @@ main h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
     width: 80%;
@@ -134,16 +143,17 @@ main h2 {
     width: 300px;
     height: 300px;
     border-radius: 5px 5px 0 0;
-    margin-left: 40px;
+   margin: 0px 20px;
 }
 .contenido{
     width: 300px;
+    border-radius: 0 0 5px 5px;
     border-left: 0.5px solid rgb(222, 217, 217);
     border-bottom: 0.5px solid rgb(222, 217, 217);
     border-right: 0.5px solid rgb(222, 217, 217);
-    margin-left: 40px;
+    margin: 0px 20px 20px 20px;
+    box-shadow: 2px 3px 10px rgb(232,230,230);
     height: 220px;
-    margin-bottom: 20px;
     padding: 20px;
 }
 .contenido p{
@@ -209,7 +219,6 @@ main h2 {
     border-left:white 1px solid;
     padding-left: 10px;
     width: 50%;
-    color: white;
 }
 .lugar h2 {
     display: inline-block;
@@ -219,6 +228,16 @@ main h2 {
     font-weight: 700;
     padding-left: 10px;
     height: 80px;
+    color: white;
+}
+.lugar p {
+    color: white;
+    font-family: 'noto-sans', sans-serif;
+    font-size: small;
+    font-weight: 300;
+    line-height: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 .conoceMas a {
     text-decoration: none;
@@ -236,6 +255,13 @@ main h2 {
 }
 .lugarFecha img{
     width: 50%;
+}
+/* ESTILOS DE LA PARTE FORMULARIO */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .contenidoFormulario{
     display: flex;
@@ -304,16 +330,6 @@ input{
     width: 460px;
     color: white;
     margin-bottom: 10px;
-}
-/* aqui se diseña la parte de las publicidad */
-.publicidad{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 80%;
-    text-align: left;
 }
 
 /* aqui se diseña la parte del footer */
@@ -404,20 +420,155 @@ input{
     text-align: center;
     color: red;
 }
-@media screen and (max-width: 768px ){
+
+@media screen and (max-width:360px ){
+    .textoConfe{
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+    .conferencia h1 {
+        padding: 0;
+        font-size: 0;
+    }
+    .lugarFecha img {
+        width: 90%;
+    }
+    .botones{
+        display: flex;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        font-size: small;
+    }
+    .bill {
+        padding-bottom: 30px;
+    }
+    .ada {
+        padding-bottom: 30px;
+    }
+    .steve{
+        padding-bottom: 30px;
+    }
+    .lugar{
+        width: 85%;
+        padding-bottom: 20px;
+    }
+    .name{
+        margin-right: 2px
+    }
+   input {
+    width: 155px;
+   }
+   textarea{
+    width: 300px;
+   }
+   .botonEnviar input{
+    width: 290px;
+   }
+   .footer {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+   }
+    .footer a {
+        width: 30%;
+    }
+    .ventas{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .encabezado h2{
+        font-size: 30px;
+    }
     .conferencia{
+        align-items: center;
+        padding-right: 0;
+    }
+    .conferencia p {
+        text-align: center;
+    }
+    .conferencia h1 {
+        text-align: center;
+        width: 100%;
+    }
+    .tituloOradores{
+        text-align: center;
+        width: 100%;
+    }
+    .contenido{
+        margin: 0;
+    }
+    .imagenOradores{
+        margin: 0;
+    }
+    .steve {
+        padding-bottom: 30px;
+    }
+    .bill{
+        padding-bottom: 30px;
+    }
+    .ada {
+        padding-bottom: 30px;
+    }
+    .lugarFecha img {
+        width: 85%;
+    }
+    .lugar {
+        width: 85%;
+    }
+    .ventas {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .encabezado{
         flex-direction: column;
-        justify-content:space-around;
-        align-items:center;
+    }
+    .encabezado h2{
+        padding-bottom: 10px;
+    }
+    ul{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    li a {
+        padding: 5px;
+    }
+    .logo {
+        padding: 0px;
+        width: 0px;
+        margin: 0px;
+    }
+    .tituloLogo {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .conferencia{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .textoConfe {
         text-align: center;
     }
     .lugarFecha{
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
     }
-    .footer{
-        justify-content: space-around;
-        align-items: center;
+    .lugar {
+        padding-bottom: 10px;
+        width:90%;
     }
+    .lugarFecha img {
+        width: 90%;
+    }
+    .footer {
+        flex-direction: column;
+        height: 145px;
+    }
+
 }
